@@ -3,3 +3,13 @@ main {
   vertical-align: center;
   line-height: 100vh
 }
+
+section {
+  outline: 2px solid lightblue;
+}
+
+.project__title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
