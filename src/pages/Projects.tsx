@@ -2,6 +2,9 @@ import Timer from '../projects/project-01/timer';
 import TodoList from '../projects/project-02/todoList';
 import TicTacToe from '../projects/project-03/game';
 import MultiSelectInput from '../projects/project-04/multiselect';
+import Accordion from '../projects/project-05/Accordion' 
+import {accordionData} from '../projects/project-05/utils/content' 
+
 
 const Projects = () => {
   return (
@@ -20,7 +23,15 @@ const Projects = () => {
       </section>
       <section id="project-04">
         <p className="project__title">4. Multiselect Input</p>
-        {/* <MultiSelectInput onSelectionChange={selectedOptions} options={inputValue}/> */}
+        {/* <MultiSelectInput onSelectionChange={setSelectedOptions} options={inputValue}/> */}
+      </section>
+      <section id="project-05">
+        <p className="project__title">5. Accordion</p>
+      <div className="accordion">
+        {accordionData.map(({ title, content }) => (
+          <Accordion title={title} content={content} />
+        ))}
+      </div>
       </section>
     </div>
   );
