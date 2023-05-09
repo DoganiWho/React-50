@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
+type Todo = {
+  id: number,
+  text: string,
+  completed: boolean,
+}
+
 function TodoList() {
   const [todos, setTodos] = useState([
     { id: 1, text: 'Learn React' },
@@ -10,7 +16,7 @@ function TodoList() {
 
   const [hideCompleted, setHideCompleted] = useState(false);
 
-  const toggleCompleted = (id) => {
+  const toggleCompleted = (id:number) => {
     setTodos((prevTodos) =>
       prevTodos.map((todo) =>
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
